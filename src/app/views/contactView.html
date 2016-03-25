@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Contact form</h3>
+            <h4 class="text-center" data-bind="text: resultMessage"></h4>
+            <form role="form">
+                <div class="form-group">
+                    <label for="emailAddress">Email</label>
+                    <input type="email" class="form-control" id="emailAddress" placeholder="Enter email address" data-bind="value: contactModel.email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" rows="8" placeholder="Enter your message" data-bind="value: contactModel.message" required></textarea>
+                </div>
+                <button data-bind="click: sendMessage" class="btn btn-default">Send</button>
+                <button data-bind="click: clearForm" class="btn btn-default">Clear</button>
+            </form>
+        </div>
+    </div>
+</div>	

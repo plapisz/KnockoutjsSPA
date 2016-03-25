@@ -12,8 +12,8 @@
             });
         });
         this.get('#contact', function () {
-            this.partial('./app/views/Contact.html', function () {
-                //ko.applyBindings(new ContactViewModel());
+            this.partial('./app/views/contactView.html', function () {
+                ko.applyBindings(new contactViewModel());
             });
         });
     });

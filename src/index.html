@@ -1,5 +1,5 @@
 <html>
-	<head>		
+    <head>		
         <meta charset="utf-8" />
 		<meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -51,32 +51,8 @@
     <script src="./assets/libs/sammy.js"></script>    
     <script src="./assets/libs/knockout.js"></script>
     
-    <script>
-        (function ($) {
-    var app = $.sammy('#main', function () {
-
-        this.get('#/', function () {
-            this.partial('./app/views/Home.html', function () {
-                //ko.applyBindings(new viewModel());
-            });
-        });
-        this.get('#books', function () {
-            this.partial('./app/views/Book.html', function () {
-                //ko.applyBindings(new viewModel());
-            });
-        });
-        this.get('#contact', function () {
-            this.partial('./app/views/Contact.html', function () {
-                //ko.applyBindings(new ContactViewModel());
-            });
-        });
-    });
-
-    $(function () {
-        app.run('#/');
-    });
-})(jQuery);
-    </script>
+     <!-- JS FILES -->
+    <script src="./app/routes.js"></script>
     
 	</body>
 </html>

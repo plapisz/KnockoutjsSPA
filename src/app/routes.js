@@ -2,8 +2,8 @@
     var app = $.sammy('#main', function () {
 
         this.get('#/', function () {
-            this.partial('./app/views/Home.html', function () {
-                //ko.applyBindings(new viewModel());
+            this.partial('./app/views/homeView.html', function () {
+                ko.applyBindings(new homeViewModel());
             });
         });
         this.get('#books', function () {

@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <h4 class="text-center">List of books</h4>
+                <h4 class="text-center"></h4>
+                <div class="input-group">
+                    <span class="input-group-addon">Find: </span>
+                    <input type="text" class="form-control" placeholder="Enter a book title" data-bind="value: currentFilter"/>
+                </div>
+                <br />
+                <table class="table table-responsive table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Title</td>
+                            <td>Year</td>
+                            <td>Author</td>
+                            <td>Remove</td>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: filterBooks">
+                        <tr>
+                            <td data-bind="text: id">></td>
+                            <td data-bind="text: title">></td>
+                            <td data-bind="text: year">></td>
+                            <td data-bind="text: author">></td>
+                            <td><button class="btn btn-danger btn-xs" data-bind="click: $root.removeBook">&times;</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- add new book -->
+                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Add book
+                </button>
+
+                <!-- Modal window -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Title</label>
+                                    <input type="text" class="form-control" data-bind="value: bookModel.title" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Year</label>
+                                    <input type="number" class="form-control" data-bind="value: bookModel.year" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Author</label>
+                                    <input type="text" class="form-control" data-bind="value: bookModel.author" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-bind="click: $root.addBook">Add book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal window -->
+            </div>
+        </div>
+    </div>
+</div>

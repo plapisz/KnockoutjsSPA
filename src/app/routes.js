@@ -7,8 +7,8 @@
             });
         });
         this.get('#books', function () {
-            this.partial('./app/views/Book.html', function () {
-                //ko.applyBindings(new viewModel());
+            this.partial('./app/views/bookView.html', function () {
+                ko.applyBindings(new bookViewModel());
             });
         });
         this.get('#contact', function () {
